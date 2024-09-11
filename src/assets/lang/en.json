@@ -1,0 +1,32 @@
+{
+  "home" : {
+    "title_line_1" : "HELLO, I AM ",
+    "title_line_2" : "BRINGING CREATIVITY TO CODE",
+    "subtitle" : "FullStack Developer at your service",
+    "project_link" : "Discover my projects",
+    "about_link" : "Learn more about me"
+  },
+  "about" : {
+    "title": "À PROPOS",
+    "bio" : "Fullstack Application Developer specialized in Java & Javascript. Driven by\n                    natural curiosity and relentless perseverance, I enjoy taking on a variety of technical challenges.\n                    Moreover, my openness to learning new technologies allows me to innovate and continuously adapt to\n                    the evolving demands of the development field."
+  },
+  "contact" : {
+    "social" : "SOCIAL NETWORKS"
+  },
+  "menu" : {
+    "home" : "HOME",
+    "about" : "ABOUT",
+    "contact" : "CONTACT",
+    "projects" : "PROJECTS"
+  },
+  "projects" : [
+    {"description" : "Design and creation of an employee management platform"},
+    {"description" : "Design & development of a sports application API"},
+    {"description" : "Minimalist Web Server"},
+    {"description" : "Drug Use Study Project"},
+    {"description" : "My portfolio"}
+  ],
+  "cfa" : {
+    "description": "Project carried out during my apprenticeship year, with the objective of creating a platform to simplify the management of users, creation of documents for Dawan employees"
+  }
+}

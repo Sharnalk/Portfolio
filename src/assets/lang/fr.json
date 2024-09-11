@@ -1,0 +1,32 @@
+{
+  "home" : {
+    "title_line_1" : "BONJOUR, JE SUIS ",
+    "title_line_2" : "ALLER DE LA CRÉATIVITÉ AU CODE",
+    "subtitle" : "Développeur Fullstack à votre service",
+    "project_link" : "Mes projets",
+    "about_link" : "Qui suis-je ?"
+  },
+  "about" : {
+    "title" : "À PROPOS",
+    "bio" : "Développeur d'applications Fullstack spécialisé en Java & Javascript. Poussé par\nune curiosité naturelle et une persévérance sans faille, j'aime relever des défis techniques variés.\nDe plus, mon ouverture à l'apprentissage de nouvelles technologies me permet d'innover et de m'adapter en permanence\naux exigences évolutives du domaine du développement."
+  },
+  "contact" : {
+    "social" : "RÉSEAUX SOCIAUX"
+  },
+  "menu" : {
+    "home" : "ACCUEIL",
+    "about" : "À PROPOS",
+    "contact" : "CONTACT",
+    "projects" : "PROJETS"
+  },
+  "projects" : [
+    {"description" : "Conception et création d'une plateforme de gestion d'employés"},
+    {"description" : "Conception & développement d'une API d'une application de sport"},
+    {"description" : "Serveur Web minimaliste"},
+    {"description" : "Projet d'étude de consommation de drogue"},
+    {"description" : "Mon portfolio"}
+  ],
+  "cfa" : {
+    "description": "Projet effectué durant mon année d'alternance, ayant pour objectif de créer une plateforme simplifiant la gestion des utilisateurs, création de documents pour les employés de Dawan"
+  }
+}

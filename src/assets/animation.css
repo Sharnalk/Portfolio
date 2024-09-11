@@ -1,0 +1,53 @@
+.home-title-animation .animate-title, .header-anim {
+    animation: fade-down 0.5s 0.4s backwards;
+}
+
+.fade-down{
+    animation: fade-down 0.5s 0.4s backwards;
+}
+
+.fade-down-content{
+    animation: fade-down 0.2s backwards;
+}
+
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
