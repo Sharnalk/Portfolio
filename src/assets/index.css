@@ -8,10 +8,10 @@
 
   }
   h2{
-    @apply lg:text-6xl md:text-5xl text-2xl font-bold;
+    @apply lg:text-6xl md:text-5xl text-xl font-bold;
   }
   h4{
-    @apply md:text-xl text-sm tracking-wider
+    @apply md:text-xl text-base tracking-wider
   }
 }
 
