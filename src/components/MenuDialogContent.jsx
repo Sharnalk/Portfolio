@@ -15,11 +15,11 @@ export function MenuDialogContent({ argSetter }) {
 
     return (
         <>
-                <div className={`menu menu-addon`}>
+                <div className={`menu bg-menu`}>
                     <ul className={`h-full w-full flex flex-col justify-center px-[10%] font-bold`}>
                         <div className={`flex flex-col gap-y-2 w-fit menu-anim`}>
                             {
-                                menuItems.map((menuItem, index) => (
+                                menuItems.map((menuItem) => (
                                     <li onClick={() => {argSetter(false)}}
                                         key={menuItem.id}
                                         className={`flex w-fit hover:tracking-widest transition-all duration-300 transform hover-underline`}

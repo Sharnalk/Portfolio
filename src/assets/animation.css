@@ -9,6 +9,12 @@
 .fade-down-content{
     animation: fade-down 0.2s backwards;
 }
+.from-left{
+    animation: from-left 0.8s backwards;
+}
+.from-right{
+    animation: from-right 0.8s backwards;
+}
 
 @keyframes fade-down {
     from {
@@ -17,10 +23,31 @@
     }
     to {
         opacity: 1;
-        transform: translateY(0px) scale(1);
+        transform: translateY(0) scale(1);
     }
 }
 
+@keyframes from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes from-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 

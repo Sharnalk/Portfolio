@@ -38,10 +38,16 @@ export default {
             fill : '#41daba'
           },
         },
-        '.menu-addon': {
+        '.bg-menu': {
           backgroundColor: '#FFC2AD',
           '.dark &': {
             backgroundColor : '#003d52'
+          },
+        },
+        '.bg-features': {
+          backgroundColor: '#FF5C5B',
+          '.dark &': {
+            backgroundColor : '#41daba'
           },
         },
       }
