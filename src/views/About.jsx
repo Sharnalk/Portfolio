@@ -13,7 +13,7 @@ export function About (){
             <div className={`flex flex-col fade-down`}>
                 <p style="font-size: 20px">{content.bio}</p>
                 <div className={`flex justify-end`}>
-                    <p className={`text-lg bg-features`}>Anas Jiyar</p>
+                    <p className={`text-lg`}>Anas Jiyar</p>
                 </div>
                 <span className={`text-xl flex items-center font-bold fade-down`} >
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">

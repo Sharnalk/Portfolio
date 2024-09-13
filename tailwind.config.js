@@ -47,7 +47,8 @@ export default {
         '.bg-features': {
           backgroundColor: '#FF5C5B',
           '.dark &': {
-            backgroundColor : '#41daba'
+            backgroundColor : '#41daba',
+            textColor:'',
           },
         },
       }

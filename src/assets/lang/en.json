@@ -26,7 +26,19 @@
     {"description" : "Drug Use Study Project"},
     {"description" : "My portfolio"}
   ],
-  "cfa" : {
-    "description": "Project carried out during my apprenticeship year, with the objective of creating a platform to simplify the management of users, creation of documents for Dawan employees"
+  "cfa": {
+    "description": "A project carried out during my apprenticeship year, aimed at creating an innovative platform to simplify user management and document creation for Dawan employees."
+  },
+  "fa": {
+    "description": "Development of a mobile application in collaboration with another developer. In this project, I am responsible for designing and developing the backend, ensuring optimal performance and security."
+  },
+  "jws": {
+    "description": "Design and implementation of a minimalist web server in Java, supporting GET requests, static files, and dynamic content, with multithreaded management for increased performance."
+  },
+  "pdc": {
+    "description": "A full-stack application developed with Django Ninja and React, offering interactive and in-depth statistical analysis on drug consumption and personality."
+  },
+  "portfolio": {
+    "description": "A modern and elegant portfolio dedicated to showcasing my skills, achievements, and projects, designed to capture the attention of recruiters and clients."
   }
 }

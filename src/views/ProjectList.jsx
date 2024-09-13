@@ -13,17 +13,6 @@ export function ProjectList (){
     const content = translation.projects[selectedProject.id - 1];
     const title = translation.menu.projects;
 
-    function animOpeningImage () {
-        gsap.from('.animOpeningImage', {
-            top: '-2vh',
-            opacity: 0,
-            duration: 0.5,
-            ease: "power1.inOut"
-        })
-    }
-    useEffect(() => {
-        
-    }, []);
     return(
         <div className={`container-content pt-[20vh] md:pt-[28vh]`}>
             <div className={`h-[100%] w-full flex rounded-lg`}>
@@ -32,7 +21,7 @@ export function ProjectList (){
                         <div className={`w-fit h-fit m-[5%] flex items-center justify-center`}>
                             {
                                 selectedProject ?
-                                    <div className={`flex flex-col gap-y-9 animOpeningImage`}>
+                                    <div className={`flex flex-col gap-y-9`}>
                                         <img src={selectedProject.img} alt="" className={`h-fit w-64 project-img`}/>
                                         <p className={`text-xl project-desc`}>{content.description}</p>
                                     </div>
@@ -54,7 +43,6 @@ export function ProjectList (){
                                         <li
                                             onMouseEnter={() => {
                                                 setSelectedProject(project);
-                                                animOpeningImage();
                                             }}
                                             onClick={() =>setDataProject(project.data)}
                                             className={`h-[100px] pt-3 grid grid-cols-2 text-center font-bold 

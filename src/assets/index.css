@@ -10,6 +10,9 @@
   h2{
     @apply lg:text-6xl md:text-5xl text-xl font-bold;
   }
+  h3{
+    @apply lg:text-3xl md:text-2xl text-xl font-bold;
+  }
   h4{
     @apply md:text-xl text-base tracking-wider
   }
@@ -77,6 +80,11 @@ body {
   gap: 0.75rem;
   z-index: 2;
 }
+
+.text-control{
+  text-overflow: ellipsis;
+}
+
 .header{
   position: absolute;
   top: 0;

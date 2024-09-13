@@ -1,29 +1,82 @@
 import {h} from 'preact';
 import useStore from "../store/store.js";
+import {useEffect, useState} from "preact/hooks";
+import {moveLeftArrow} from "../assets/svg/moveLeftArrow.jsx";
+import {moveRightArrow} from "../assets/svg/moveRightArrow.jsx";
+import {projects} from "../customFunctions/dataProjects.js";
+export function ProjectViewer () {
 
-export function ProjectViewer (){
-    const {dataProject} = useStore();
+    const {dataProject, setDataProject} = useStore();
+    const [keyTranslation, setKeyTranslation] = useState(dataProject.key);
     const translation = useStore(state => state.translations);
+    const goBack = () => {
+        window.history.back();
+    };
+    const nextProject = projects[(projects.findIndex(el => el.id === dataProject.id) + 1) % projects.length];
 
-    return(
-        <div className={`container-content items-center justify-center pt-[20vh] md:pt-[28vh]`}>
-            <div className={`w-[100vw] md:w-[50vw] h-[100vh] z-10 `}>
+    useEffect(() => {
+        setKeyTranslation(dataProject.key);
+    }, [dataProject]);
+
+    const next =
+        <h3>
+            <span onClick={() => {setDataProject(nextProject.data)}} className={`flex justify-end items-center gap-x-1`}>
+                SUIVANT
+                <moveRightArrow/>
+            </span>
+        </h3>
+
+    const previous =
+        <h3>
+            <span onClick={() => goBack()} className={`flex items-center gap-x-1 mt-[-2%]`}>
+                <moveLeftArrow/>
+                RETOUR
+            </span>
+        </h3>
+
+    return (
+        <div className={`container-content md:items-center px-[5%]`}>
+            <div className={`w-full md:w-[60%] h-[100vh] flex flex-col justify-center gap-y-3`}>
+
+                {previous}
+
                 <h1>{dataProject.name}</h1>
-                <p>{translation.cfa.description}</p>
-                <h4>TECHNOLOGIES</h4>
+                <p className={`text-control`}>{translation[keyTranslation]?.description}</p>
+
+                <h3>TECHNOLOGIES</h3>
                 <ul className={`flex gap-x-2`}>
-                    {dataProject.technologies.map(i => (
-                        <li key={i.index} className={`bg-gray-50 rounded-3xl w-fit`}>
-                            {i}
+                    {dataProject.technologies.map(technology => (
+                        <li key={technology.index}
+                            className={`w-fit h-fit font-medium rounded-[20px] bg-features px-[20px] pb-[2px]`}>
+                            {technology}
                         </li>
                     ))}
                 </ul>
-                <h4>FRAMEWORK</h4>
-                <ul>
-                    {}
+
+                <h3>FRAMEWORK</h3>
+                <ul className={`flex gap-x-2`}>
+                    {dataProject.frameworks.map(framework => (
+                        <li key={framework.index}
+                            className={`w-fit h-fit font-medium rounded-[20px] bg-features px-[20px] pb-[2px]`}>
+                            {framework}
+                        </li>
+                    ))}
                 </ul>
-                <h4>DETAILS</h4>
-                <ul></ul>
+                <div className={`flex justify-between`}>
+                    {
+                        dataProject.link ?
+                            <div className={`flex`}>
+                                <h3>LINK :&nbsp;</h3>
+                                <a href={dataProject.link} className={`font-normal truncate`}>
+                                    <h3 className={`hover-underline`}>
+                                        {dataProject.link}
+                                    </h3>
+                                </a>
+                            </div> : <div></div>
+                    }
+                    {next}
+                </div>
+
             </div>
         </div>
     )
