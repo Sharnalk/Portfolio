@@ -1,4 +1,5 @@
 {
+  "back" : "BACK",
   "home" : {
     "title_line_1" : "HELLO, I AM ",
     "title_line_2" : "BRINGING CREATIVITY TO CODE",
@@ -8,7 +9,7 @@
   },
   "about" : {
     "title": "À PROPOS",
-    "bio" : "Fullstack Application Developer specialized in Java & Javascript. Driven by\n                    natural curiosity and relentless perseverance, I enjoy taking on a variety of technical challenges.\n                    Moreover, my openness to learning new technologies allows me to innovate and continuously adapt to\n                    the evolving demands of the development field."
+    "bio" : "Fullstack Application Developer specialized in Java & Javascript. Driven by\n natural curiosity and relentless perseverance, I enjoy taking on a variety of technical challenges.\n                    Moreover, my openness to learning new technologies allows me to innovate and continuously adapt to\n                    the evolving demands of the development field."
   },
   "contact" : {
     "social" : "SOCIAL NETWORKS"
@@ -39,6 +40,6 @@
     "description": "A full-stack application developed with Django Ninja and React, offering interactive and in-depth statistical analysis on drug consumption and personality."
   },
   "portfolio": {
-    "description": "A modern and elegant portfolio dedicated to showcasing my skills, achievements, and projects, designed to capture the attention of recruiters and clients."
+    "description": "A modern and elegant portfolio dedicated to showcasing my skills, achievements, and projects."
   }
 }

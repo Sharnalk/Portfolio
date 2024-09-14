@@ -1,15 +1,21 @@
 import {h} from 'preact';
 import useStore from "../store/store.js";
+import {useEffect} from "preact/hooks";
+import {gsap} from "gsap";
 
 export function About (){
 
     const translation = useStore(state => state.translations);
     const content = translation.about;
-
+    useEffect(()=> {
+        const tl = gsap.timeline();
+        tl.to('.line', {x:0, duration:1, ease:"power1.inOut"})
+        tl.to('.text-anim', {x:0, opacity:1, duration:1, ease:"power3.out"})
+    })
     return(
         <div className={`container-content`}>
             <p className={`title-view fade-down`}>{content.title}</p>
-            <hr className={`h-1/2 fade-down border-[#17191d] dark:border-[#E6E6FA]`}/>
+            <hr className={`h-1/2 md:border-[1px] border-[--theme-color] translate-x-[-100vw] line`}/>
             <div className={`flex flex-col fade-down`}>
                 <p style="font-size: 20px">{content.bio}</p>
                 <div className={`flex justify-end`}>

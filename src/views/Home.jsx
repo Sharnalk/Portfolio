@@ -1,5 +1,6 @@
 import {h} from 'preact';
 import {CustomLink} from "../customFunctions/CustomLink.jsx";
+import {MoveRightArrow} from "../assets/svg/MoveRightArrow.jsx";
 import useStore from "../store/store.js";
 import {useEffect} from "preact/hooks";
 import {gsap} from "gsap";
@@ -31,7 +32,7 @@ export function Home() {
                            <span className="text-lg md:text-[1.25rem] hover-underline group">
                                 <div className={`flex`}>
                                     {translation.home.project_link}
-                                    <p className="arrow duration-300 group-hover:scale-125 ml-2">➡</p>
+                                    <p className="arrow duration-300 group-hover:translate-x-0.5 ml-2"><MoveRightArrow/></p>
                                 </div>
                             </span>
                         </CustomLink>
@@ -39,7 +40,7 @@ export function Home() {
                             <span className="text-lg md:text-[1.25rem] hover-underline group">
                                 <div className={`flex`}>
                                     {translation.home.about_link}
-                                    <p className="arrow duration-300 group-hover:scale-125 ml-2">➡</p>
+                                    <p className="arrow duration-300 group-hover:translate-x-0.5 ml-2"><MoveRightArrow/></p>
                                 </div>
                             </span>
                         </CustomLink>

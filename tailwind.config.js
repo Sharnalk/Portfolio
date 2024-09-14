@@ -45,9 +45,16 @@ export default {
           },
         },
         '.bg-features': {
-          backgroundColor: '#FF5C5B',
+          backgroundColor: '#FFC2AD',
           '.dark &': {
             backgroundColor : '#41daba',
+            textColor:'',
+          },
+        },
+        '.bg-features-2': {
+          backgroundColor: '#FF5C5B',
+          '.dark &': {
+            backgroundColor : '#00a3a4',
             textColor:'',
           },
         },

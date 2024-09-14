@@ -1,4 +1,5 @@
 {
+  "back" : "RETOUR",
   "home" : {
     "title_line_1" : "BONJOUR, JE SUIS ",
     "title_line_2" : "ALLER DE LA CRÉATIVITÉ AU CODE",
@@ -39,6 +40,6 @@
     "description": "Application Full Stack développée avec Django Ninja et React, offrant une analyse statistique interactive et approfondie sur la consommation de drogues et la personnalité."
   },
   "portfolio": {
-    "description": "Un portfolio moderne et élégant dédié à la présentation de mes compétences, réalisations et projets, conçu pour capter l'attention des recruteurs et clients."
+    "description": "Un portfolio moderne et élégant dédié à la présentation de mes compétences, réalisations et projets."
   }
 }

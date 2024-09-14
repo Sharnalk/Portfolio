@@ -26,6 +26,5 @@ const useStore = create((set, get) =>({
         set({ dataProject: item });
         sessionStorage.clear()
         sessionStorage.setItem('dataProject', JSON.stringify(item));
-        console.log(item);
     }}));
 export default useStore;

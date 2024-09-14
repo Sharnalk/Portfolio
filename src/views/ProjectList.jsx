@@ -13,6 +13,12 @@ export function ProjectList (){
     const content = translation.projects[selectedProject.id - 1];
     const title = translation.menu.projects;
 
+    useEffect(() => {
+        gsap.fromTo('.project-list',
+            {opacity: 0, yPercent:-150},
+            {opacity: 1 ,yPercent:0, stagger: 0.08, ease: 'power4.inOut', duration: 1});
+    }, [])
+
     return(
         <div className={`container-content pt-[20vh] md:pt-[28vh]`}>
             <div className={`h-[100%] w-full flex rounded-lg`}>
@@ -35,7 +41,7 @@ export function ProjectList (){
                 }
 
                     <div className={`flex w-full md:w-3/4 flex-col items-center gap-y-6 overflow-y-hidden`}>
-                        <h2>{title}</h2>
+                        <h2 className={`fade-down`}>{title}</h2>
                         <ul className={`w-full h-[70vh] md:h-[60vh] enable-overflow`}>
                             {
                                 projects.map((project) => (
