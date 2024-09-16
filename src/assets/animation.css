@@ -10,7 +10,7 @@
     animation: fade-down 0.2s backwards;
 }
 .from-left{
-    animation: from-left 0.8s backwards;
+    animation: from-left 1s backwards ease-in-out;
 }
 .from-right{
     animation: from-right 0.8s backwards;

@@ -125,6 +125,7 @@ body {
 .enable-overflow::-webkit-scrollbar-button {
   display: none;
 }
+
 .hover-underline {
   display: inherit;
   position: relative;
@@ -172,7 +173,7 @@ button.dots:focus {
   outline: none;
 }
 
-/* Menu Burger 1 */
+/* Menu Burger  */
 button.dots.dots::after,
 button.dots.dots::before,
 button.dots.dots span {
@@ -216,4 +217,3 @@ button.dots.dots.on::before {
   right: 9%;
   margin-bottom: -2px;
 }
-

@@ -2,15 +2,16 @@ import {h} from 'preact';
 import {CustomLink} from "../customFunctions/CustomLink.jsx";
 import {MoveRightArrow} from "../assets/svg/MoveRightArrow.jsx";
 import useStore from "../store/store.js";
-import {useEffect} from "preact/hooks";
+import {useLayoutEffect} from "preact/hooks";
 import {gsap} from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
+import {Wave} from "../assets/svg/Wave.jsx";
 
 export function Home() {
     gsap.registerPlugin(TextPlugin);
     const translation = useStore(state => state.translations);
     const content = translation.home;
-    useEffect(() => {
+    useLayoutEffect(() => {
         gsap.to('#name',{duration: 2, text:'ANAS JIYAR', delay:0.8, ease:'power1.inOut'})
     }, [])
 
@@ -20,11 +21,10 @@ export function Home() {
                         <h2>{content.title_line_1}<span id='name'></span></h2>
                         <h2>{content.title_line_2}</h2>
                         <div className={`flex items-center w-full`}>
-                            <hr className={`h-1/2 border-[1px] w-full from-right border-[#17191d] dark:border-[#E6E6FA] mt-1`}/>
+                            <Wave/>
                             <h4 className={`whitespace-nowrap mx-1 z-10`}>{content.subtitle}</h4>
-                            <hr className={`h-1/2 border-[1px] w-full from-left border-[#17191d] dark:border-[#E6E6FA] mt-1`}/>
+                            <Wave/>
                         </div>
-
                     </span>
 
                     <section className="flex flex-row gap-x-3 md:gap-x-9 mt-4 text-center animate-title">

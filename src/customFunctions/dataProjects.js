@@ -1,7 +1,7 @@
 import LogoDawan from "../assets/img/logo_dawan.png";
-import LogoPredictingDrugConsumption from "../assets/img/pill.png";
+import LogoPredictingDrugConsumption from "../assets/svg/pill.svg";
 import LogoPortfolio from "../assets/img/logo_portfolio.png";
-import LogoJavaWebServer from "../assets/img/logo_portfolio.png";
+import LogoJavaWebServer from "../assets/img/java_web_server.png";
 const cfa = {
     id: 1,
     key:'cfa',

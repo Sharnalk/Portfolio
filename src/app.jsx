@@ -9,7 +9,7 @@ import {useEffect} from "preact/hooks";
 import {cursorPosition, cursorScale} from "./customFunctions/CursorEventsListener.js";
 import useStore from "./store/store.js";
 import {BackgroundSvgWave} from "./components/BackgroundSvgWave.jsx";
-
+import './customFunctions/gsapEffect.js'
 export function App() {
     const {screenSize, setScreenSize} = useStore();
 
@@ -21,18 +21,18 @@ export function App() {
         handleResize()
     }, [])
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const cursor = document.querySelector('.cursor');
+    document.addEventListener("DOMContentLoaded", () => {
+        const cursor = document.querySelector('.cursor');
 
-            if (cursor) {
-                cursorPosition(cursor, 13.5);
-                cursorScale(cursor);
-            }
-            // Event for menu burger
-            document.querySelector(".dots").addEventListener("click", function(e) {
-                return e.currentTarget.classList.toggle("on");
-            });
+        if (cursor) {
+            cursorPosition(cursor, 13.5);
+            cursorScale(cursor);
+        }
+        // Event for menu burger
+        document.querySelector(".dots").addEventListener("click", function(e) {
+            return e.currentTarget.classList.toggle("on");
         });
+    });
   return (
     <div className={`flex flex-col min-h-[100vh] overflow-hidden z-0 mainTheme transition-all duration-200`}>
         <div className={screenSize > 800 ? "cursor" : ""}></div>

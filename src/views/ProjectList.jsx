@@ -1,5 +1,5 @@
 import {h} from 'preact';
-import {useEffect, useState} from "preact/hooks";
+import {useLayoutEffect, useState} from "preact/hooks";
 import {Link} from "wouter";
 import {gsap} from "gsap";
 import useStore from "../store/store.js";
@@ -13,10 +13,15 @@ export function ProjectList (){
     const content = translation.projects[selectedProject.id - 1];
     const title = translation.menu.projects;
 
-    useEffect(() => {
-        gsap.fromTo('.project-list',
-            {opacity: 0, yPercent:-150},
-            {opacity: 1 ,yPercent:0, stagger: 0.08, ease: 'power4.inOut', duration: 1});
+    useLayoutEffect(() => {
+        gsap.to('.project-list',{
+            opacity: 1,
+            y: 0,
+            stagger: 0.08,
+            ease: 'power4.inOut',
+            duration: 1
+        }
+        );
     }, [])
 
     return(
@@ -52,7 +57,7 @@ export function ProjectList (){
                                             }}
                                             onClick={() =>setDataProject(project.data)}
                                             className={`h-[100px] pt-3 grid grid-cols-2 text-center font-bold 
-                                            hover:bg-gray-50/25 hover:bg-opacity-25 hover:backdrop-blur duration-150 project-list`}
+                                            hover:bg-gray-50/25 hover:bg-opacity-25 hover:backdrop-blur duration-150 opacity-0 translate-y-[-100%] project-list`}
                                             key={project.id}
                                         >
                                             <h4>{project.title}</h4>

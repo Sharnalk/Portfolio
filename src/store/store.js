@@ -10,7 +10,7 @@ const useStore = create((set, get) =>({
             translations: translations[lang],
         })
     },
-    activeMenu:false,
+    activeMenu: false,
     setActiveMenu: (activeMenu) => set({activeMenu}),
     testAnimRoute: false,
     setTestAnimRoute: (item) => set({item}),
