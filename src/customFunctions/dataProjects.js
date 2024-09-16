@@ -48,9 +48,9 @@ const portfolio = {
     github:'https://github.com/Sharnalk/Portfolio'
 }
 export const projects = [
-    {id: 1, title: 'CFA - DAWAN', category: 'Fullstack', img: LogoDawan, data:cfa ,date: ''},
-    {id: 2, title: 'FitAce API', category: 'Backend', description: 'Conception & développement d une API d une application de sport', data:fitAce , img: LogoPredictingDrugConsumption, date: ''},
-    {id: 3, title: 'Java WebServer', category: 'Backend', description: 'Web Server minimaliste',data:javaWebServer , img: LogoJavaWebServer, date: ''},
-    {id: 4, title: 'Predicting Drug Consumption', category: 'Frontend', data:predictingDrugConsumption , img: LogoPredictingDrugConsumption, date: ''},
-    {id: 5, title: 'Portfolio', category: 'Frontend', img: LogoPortfolio, data:portfolio , date: ''},
+    {id: 1, title: 'Portfolio', category: 'Frontend', img: LogoPortfolio, data:portfolio , date: ''},
+    {id: 2, title: 'Predicting Drug Consumption', category: 'Frontend', data:predictingDrugConsumption , img: LogoPredictingDrugConsumption, date: ''},
+    {id: 3, title: 'Java WebServer', category: 'Backend', data:javaWebServer , img: LogoJavaWebServer, date: ''},
+    {id: 4, title: 'CFA - DAWAN', category: 'Fullstack', img: LogoDawan, data:cfa ,date: ''},
+    {id: 5, title: 'FitAce API', category: 'Backend', data:fitAce , img: LogoPredictingDrugConsumption, date: ''},
 ];
