@@ -1,8 +1,14 @@
 import {h} from 'preact';
-export function Wave (){
+export function Wave ({trigger}){
+
     return(
         <>
-            <svg viewBox='0 0 900 100' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+            <svg viewBox='0 0 900 100'
+                 width='100%'
+                 height='100%'
+                 xmlns='http://www.w3.org/2000/svg'
+                 className={`sine-wave`}
+            >
                 <path
                     d='M 0 50
                     Q 50 0, 100 50
@@ -13,9 +19,10 @@ export function Wave (){
                     Q 550 100, 600 50
                     Q 650 0, 700 50
                     Q 750 100, 800 50
-                    Q 850 0, 900 50'
-                    className={`stroke-[#333333] dark:stroke-[#EAEAEA] stroke-[4px]`}
-                    fill='transparent'
+                    Q 850 0, 900 50
+                    Q 950 100, 1000 50
+                    Q 1050 0, 1100 50'
+                    className={`stroke-[#333333] dark:stroke-[#EAEAEA] stroke-[4px] ${trigger ? 'sine-wave-path' : ''}`}                    fill='transparent'
                 />
             </svg>
         </>

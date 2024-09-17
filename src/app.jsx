@@ -6,7 +6,7 @@ import {Contact} from "./views/Contact.jsx";
 import {ProjectList} from "./views/ProjectList.jsx";
 import {ProjectViewer} from "./views/ProjectViewer.jsx";
 import {useEffect} from "preact/hooks";
-import {cursorPosition, cursorScale} from "./customFunctions/CursorEventsListener.js";
+import {cursorPosition, cursorScale} from "./customFunctions/CursorEvents.js";
 import useStore from "./store/store.js";
 import {BackgroundSvgWave} from "./components/BackgroundSvgWave.jsx";
 import './customFunctions/gsapEffect.js'

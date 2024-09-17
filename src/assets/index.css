@@ -242,3 +242,15 @@ button.dots.dots.on::before {
 .highlight-text:hover::after {
   top: 0;
 }
+
+@keyframes wave{
+  0%{
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(-200px)
+  }
+}
+.sine-wave .sine-wave-path{
+  animation: wave 0.4s linear infinite
+}
