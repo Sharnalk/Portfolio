@@ -1,6 +1,4 @@
 import {h} from 'preact';
-import {useLayoutEffect} from "preact/hooks";
-import {gsap} from "gsap";
 
 export function Wave ({trigger}){
 

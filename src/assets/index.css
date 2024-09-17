@@ -259,12 +259,3 @@ button.dots.dots.on::before {
 .sine-wave:hover .sine-wave-path {
   animation-play-state: running;
 }
-
-@keyframes wave-on-start{
-  0%{
-    transform: translateX(-200px)
-  }
-  100% {
-    transform: translateX(0px)
-  }
-}
