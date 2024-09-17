@@ -1,5 +1,5 @@
 import {h} from 'preact';
-import {useEffect, useState} from "preact/hooks";
+import {useLayoutEffect, useState} from "preact/hooks";
 import {moonIcon, sunIcon} from "../assets/svgIcons.jsx";
 import useStore from "../store/store.js";
 import {CustomLink} from "../customFunctions/CustomLink.jsx";
@@ -15,7 +15,7 @@ export function Header () {
         return sessionStorage.getItem("theme") === 'dark'; // true for dark, false for light
     });
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const themeClass = theme ? 'dark-theme' : 'light-theme';
         document.documentElement.classList.remove('dark-theme', 'light-theme');
         document.documentElement.classList.add(themeClass);
@@ -25,24 +25,24 @@ export function Header () {
     }, [theme, activeMenu]);
 
     return (
-            <div className={`header-anim header h-[10vh] md:h-[20vh]`}>
-                    <CustomLink to={"/"} className={`custom-cursor`}>
-                        <img src="/img.png"
-                             alt="logo"
-                             className={`h-[50px] w-[50px] z-10`}
-                             onClick={() => setActiveMenu(false)}
-                        />
-                    </CustomLink>
-                    <div className={`flex items-center gap-x-2 `}>
-                        <div className="p-2 z-10" onClick={() => setTheme(!theme)}>
-                            {sunIcon}
-                            {moonIcon}
-                        </div>
-                        <p className={`font-bold text-lg z-10`} onClick={() => setLang(switchLang)}>
-                            {switchLang.toUpperCase()}
-                        </p>
-                        <Menu/>
-                    </div>
+        <div className={`header-anim header h-[10vh] md:h-[20vh]`}>
+            <CustomLink to={"/"} className={`custom-cursor`}>
+                <img src="/img.png"
+                     alt="logo"
+                     className={`h-[50px] w-[50px] z-10`}
+                     onClick={() => setActiveMenu(false)}
+                />
+            </CustomLink>
+            <div className={`flex items-center gap-x-2 `}>
+                <div className="p-2 z-10" onClick={() => setTheme(!theme)}>
+                    {sunIcon}
+                    {moonIcon}
+                </div>
+                <p className={`font-bold text-lg z-10`} onClick={() => setLang(switchLang)}>
+                    {switchLang.toUpperCase()}
+                </p>
+                <Menu/>
             </div>
+        </div>
     )
 }
