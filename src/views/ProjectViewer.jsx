@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import useStore from "../store/store.js";
-import { useEffect, useState, useLayoutEffect } from "preact/hooks";
+import {useState, useLayoutEffect, useRef, useEffect} from "preact/hooks";
 import { MoveLeftArrow } from "../assets/svg/MoveLeftArrow.jsx";
 import { MoveRightArrow } from "../assets/svg/MoveRightArrow.jsx";
 import { ExternalLink } from "../assets/svg/ExternalLink.jsx";
@@ -18,12 +18,6 @@ export function ProjectViewer() {
     const nextProject = projects[(currentProject + 1) % projects.length];
 
     useLayoutEffect(() => {
-        gsap.from('#back', { x: '60px', opacity: 0, duration: 1, ease: 'power2.inOut' });
-        gsap.from('#next', { x: '-60px', opacity: 0, duration: 1, ease: 'power2.inOut' });
-    }, [])
-
-    useLayoutEffect(() => {
-        setKeyTranslation(dataProject.key);
         gsap.from('.tech-list-anim, .fram-list-anim', {
             x: '-50px',
             opacity: 0,
@@ -31,11 +25,17 @@ export function ProjectViewer() {
             stagger: 0.02,
             ease: 'power2.inOut',
         })
+    }, []);
+
+    useEffect(() => {
+        setKeyTranslation(dataProject.key);
+
     }, [dataProject]);
 
     const next = (
-        <h3 id='next'>
-            <span onClick={() => setDataProject(nextProject.data)} className={`flex justify-end items-center gap-x-1`}>
+        <h3 className={`from-left-short`}>
+            <span onClick={() => setDataProject(nextProject.data)}
+                  className={`flex justify-end items-center gap-x-1`}>
                 {nextProject.title}
                 <MoveRightArrow />
             </span>
@@ -43,9 +43,10 @@ export function ProjectViewer() {
     );
 
     const goBackRoute = (
-        <h3 id='back'>
-            <span onClick={() => goBack()} className={`flex items-center gap-x-1 mt-[-2%]`}>
-                <MoveLeftArrow />
+        <h3 className={`from-right-short`}>
+            <span onClick={() => goBack()}
+                  className={`flex items-center gap-x-1 mt-[-2%]`}>
+                <MoveLeftArrow/>
                 {translation.back}
             </span>
         </h3>
