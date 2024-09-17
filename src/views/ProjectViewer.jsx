@@ -86,7 +86,7 @@ export function ProjectViewer() {
 
                 <div className={`flex fade-down`}>
                     {dataProject.link ? (
-                        <a href={dataProject.link} className={`font-normal flex items-center`}>
+                        <a href={dataProject.link} className={`font-normal flex items-center highlight-text`}>
                             <ExternalLink />
                             <h3>LINK&nbsp;</h3>
                         </a>
@@ -94,7 +94,7 @@ export function ProjectViewer() {
                         <div></div>
                     )}
                     {dataProject.github ? (
-                        <a href={dataProject.github} className={`font-normal flex items-center`}>
+                        <a href={dataProject.github} className={`font-normal flex items-center highlight-text`}>
                             <ExternalLink />
                             <h3>GITHUB&nbsp;</h3>
                         </a>

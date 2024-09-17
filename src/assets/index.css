@@ -37,10 +37,12 @@
 
 .dark-theme {
   --theme-color: #EAEAEA;
+  --theme-bg-color: #616161;
 }
 
 .light-theme {
   --theme-color: #616161;
+  --theme-bg-color: #CCCCCC;
 }
 
 *{
@@ -53,6 +55,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+  background-color: aqua;
 }
 .svg-background{
   width: 100vw;
@@ -216,4 +219,26 @@ button.dots.dots.on::before {
   bottom: 50%;
   right: 9%;
   margin-bottom: -2px;
+}
+
+.highlight-text {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 100%;
+  background-color: var(--theme-bg-color);
+  z-index: -1;
+  transition: top 0.4s ease;
+}
+
+.highlight-text:hover::after {
+  top: 0;
 }
