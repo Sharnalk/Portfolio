@@ -251,6 +251,20 @@ button.dots.dots.on::before {
     transform: translateX(-200px)
   }
 }
-.sine-wave .sine-wave-path{
-  animation: wave 0.4s linear infinite
+.sine-wave-path {
+  animation: wave 0.4s linear infinite;
+  animation-play-state: paused;
+}
+
+.sine-wave:hover .sine-wave-path {
+  animation-play-state: running;
+}
+
+@keyframes wave-on-start{
+  0%{
+    transform: translateX(-200px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
 }

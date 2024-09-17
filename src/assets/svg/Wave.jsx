@@ -1,4 +1,7 @@
 import {h} from 'preact';
+import {useLayoutEffect} from "preact/hooks";
+import {gsap} from "gsap";
+
 export function Wave ({trigger}){
 
     return(
@@ -22,7 +25,9 @@ export function Wave ({trigger}){
                     Q 850 0, 900 50
                     Q 950 100, 1000 50
                     Q 1050 0, 1100 50'
-                    className={`stroke-[#333333] dark:stroke-[#EAEAEA] stroke-[4px] ${trigger ? 'sine-wave-path' : ''}`}                    fill='transparent'
+                    className={`stroke-[#333333] dark:stroke-[#EAEAEA] stroke-[4px] sine-wave-path`}
+                    style={{ animationPlayState: trigger ? 'running' : 'paused' }}
+                    fill='transparent'
                 />
             </svg>
         </>
