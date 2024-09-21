@@ -168,6 +168,7 @@ button.dots {
   border: none;
   position: relative;
   cursor: inherit;
+  font-weight: 700;
   z-index: 10;
 }
 

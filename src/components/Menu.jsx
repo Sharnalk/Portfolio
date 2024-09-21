@@ -16,14 +16,14 @@ export function Menu (){
 
         } else {
             const tl = gsap.timeline();
-            tl.listText('.menu-anim li', {top: '-5dvh', opacity: 0, ease: 'power4.out'})
-            tl.background('.menu', {top: '-100dvh'})
+            tl.listText('.menu-anim li', {top: '-5vh', opacity: 0, ease: 'power4.out'})
+            tl.background('.menu', {top: '-100vh'})
         }
     }, [activeMenu]);
 
     return(
         <>
-            <span className={`font-bold`} onClick={() => (setActiveMenu(!activeMenu))}>
+            <span onClick={() => (setActiveMenu(!activeMenu))}>
                 <button className={activeMenu ? "dots on" : "dots"}>
                     <span></span>
                 </button>

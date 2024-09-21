@@ -9,7 +9,7 @@ gsap.registerEffect({
             ease: config.ease,
         });
     },
-    defaults: { duration: 0.4, top:0, ease: 'power2.inOut'},
+    defaults: { duration: 0.4, top:0 , ease: 'power2.inOut'},
     extendTimeline: true
 });
 
