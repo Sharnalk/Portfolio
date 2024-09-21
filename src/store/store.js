@@ -12,11 +12,9 @@ const useStore = create((set, get) =>({
     },
     activeMenu: false,
     setActiveMenu: (activeMenu) => set({activeMenu}),
-    testAnimRoute: false,
-    setTestAnimRoute: (item) => set({item}),
     screenSize: document.documentElement.clientWidth,
     setScreenSize: (item) => set({item}),
-    dataProject: JSON.parse(localStorage.getItem('dataProject')) || {
+    dataProject: JSON.parse(sessionStorage.getItem('dataProject')) || {
         name: '',
         description: '',
         technologies: [],

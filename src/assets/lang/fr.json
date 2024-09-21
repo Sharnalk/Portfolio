@@ -21,25 +21,25 @@
     "projects" : "PROJETS"
   },
   "projects" : [
-    {"description" : "Conception et création d'une plateforme de gestion d'employés"},
-    {"description" : "Conception & développement d'une API d'une application de sport"},
-    {"description" : "Serveur Web minimaliste"},
+    {"description" : "Portfolio"},
     {"description" : "Projet d'étude de consommation de drogue"},
-    {"description" : "Mon portfolio"}
+    {"description" : "Serveur Web minimaliste"},
+    {"description" : "Conception & développement d'une API d'une application de sport"},
+    {"description" : "Conception et création d'une plateforme de gestion d'employés"}
   ],
   "cfa": {
-    "description": "Projet réalisé lors de mon année d'apprentissage, visant à créer une plateforme innovante pour simplifier la gestion des utilisateurs et la création de documents pour les employés de Dawan."
+    "description": "Projet visant à créer une plateforme innovante pour simplifier la gestion des utilisateurs et la création de documents pour les employés de Dawan."
   },
   "fa": {
-    "description": "Développement d'une application mobile en collaboration avec un autre développeur. Dans ce projet, je suis responsable de la conception et du développement du backend, garantissant une performance et une sécurité optimales."
+    "description": "Conception et implémentation Backend d'une application Java /React Native basée sur le sport. Conception du Modèle Conceptuel de Données, REST Controller, Authentification à double jeton, WebSocket, Pair programming."
   },
   "jws": {
     "description": "Conception et réalisation d'un serveur web minimaliste en Java, supportant les requêtes GET, les fichiers statiques et le contenu dynamique, avec gestion multithread pour une performance accrue."
   },
   "pdc": {
-    "description": "Application Full Stack développée avec Django Ninja et React, offrant une analyse statistique interactive et approfondie sur la consommation de drogues et la personnalité."
+    "description": "Application Full Stack développée avec Django Ninja et React, offrant une analyse statistique sur la consommation de drogues et la personnalité."
   },
   "portfolio": {
-    "description": "Un portfolio moderne et élégant dédié à la présentation de mes compétences, réalisations et projets."
+    "description": "Un portfolio dédié à la présentation de mes compétences, réalisations et projets."
   }
 }

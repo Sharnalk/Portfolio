@@ -8,7 +8,7 @@ export function Wave ({trigger}){
                  width='100%'
                  height='100%'
                  xmlns='http://www.w3.org/2000/svg'
-                 className={`sine-wave hidden md:visible`}
+                 className={`sine-wave opacity-0 md:opacity-100`}
             >
                 <path
                     d='M 0 50

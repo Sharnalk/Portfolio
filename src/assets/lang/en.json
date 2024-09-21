@@ -1,45 +1,45 @@
 {
-  "back" : "BACK",
-  "home" : {
-    "title_line_1" : "HELLO, I AM ",
-    "title_line_2" : "BRINGING CREATIVITY TO CODE",
-    "subtitle" : "FullStack Developer at your service",
-    "project_link" : "MY PROJECTS",
-    "about_link" : "WHO AM I ?"
+  "back": "BACK",
+  "home": {
+    "title_line_1": "HELLO, I AM ",
+    "title_line_2": "ALLY CREATIVITY WITH CODE",
+    "subtitle": "Fullstack Developer at your service",
+    "project_link": "MY PROJECTS",
+    "about_link": "WHO AM I?"
   },
-  "about" : {
-    "title": "À PROPOS",
-    "bio" : "Fullstack Application Developer specialized in Java & Javascript. Driven by\n natural curiosity and relentless perseverance, I enjoy taking on a variety of technical challenges.\n                    Moreover, my openness to learning new technologies allows me to innovate and continuously adapt to\n                    the evolving demands of the development field."
+  "about": {
+    "title": "ABOUT ME",
+    "bio": "Fullstack application developer specialized in Java & Javascript. Driven by natural curiosity and unwavering perseverance, I enjoy tackling various technical challenges. Moreover, my openness to learning new technologies allows me to innovate and continuously adapt to the ever-evolving demands of the development field."
   },
-  "contact" : {
-    "social" : "SOCIAL NETWORKS"
+  "contact": {
+    "social": "SOCIAL NETWORKS"
   },
-  "menu" : {
-    "home" : "HOME",
-    "about" : "ABOUT",
-    "contact" : "CONTACT",
-    "projects" : "PROJECTS"
+  "menu": {
+    "home": "HOME",
+    "about": "ABOUT ME",
+    "contact": "CONTACT",
+    "projects": "PROJECTS"
   },
-  "projects" : [
-    {"description" : "Design and creation of an employee management platform"},
-    {"description" : "Design & development of a sports application API"},
-    {"description" : "Minimalist Web Server"},
-    {"description" : "Drug Use Study Project"},
-    {"description" : "My portfolio"}
+  "projects": [
+    {"description": "Portfolio"},
+    {"description": "Drug consumption study project"},
+    {"description": "Minimalist Web Server"},
+    {"description": "Design & development of a sports app API"},
+    {"description": "Design and creation of an employee management platform"}
   ],
   "cfa": {
-    "description": "A project carried out during my apprenticeship year, aimed at creating an innovative platform to simplify user management and document creation for Dawan employees."
+    "description": "Project carried out during my apprenticeship year, aiming to create an innovative platform to simplify user management and document creation for Dawan employees."
   },
   "fa": {
-    "description": "Development of a mobile application in collaboration with another developer. In this project, I am responsible for designing and developing the backend, ensuring optimal performance and security."
+    "description": "Backend design and implementation of a Java/React Native sports application. Data Model design, REST Controller, double token authentication, WebSocket, Pair programming."
   },
   "jws": {
-    "description": "Design and implementation of a minimalist web server in Java, supporting GET requests, static files, and dynamic content, with multithreaded management for increased performance."
+    "description": "Design and development of a minimalist web server in Java, supporting GET requests, static files, and dynamic content, with multithreaded management for enhanced performance."
   },
   "pdc": {
-    "description": "A full-stack application developed with Django Ninja and React, offering interactive and in-depth statistical analysis on drug consumption and personality."
+    "description": "Full Stack application developed with Django Ninja and React, providing statistical analysis on drug consumption and personality."
   },
   "portfolio": {
-    "description": "A modern and elegant portfolio dedicated to showcasing my skills, achievements, and projects."
+    "description": "A portfolio dedicated to showcasing my skills, achievements, and projects."
   }
 }

@@ -8,7 +8,7 @@
 
   }
   h2{
-    @apply lg:text-6xl md:text-5xl text-xl font-bold;
+    @apply lg:text-5xl md:text-5xl text-[1.4rem] font-bold;
   }
   h3{
     @apply lg:text-3xl md:text-2xl text-xl font-bold;
@@ -95,7 +95,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding-inline: 8%;
+  padding-inline: 12%;
   background-color: transparent;
   z-index: 9;
 }
@@ -252,7 +252,7 @@ button.dots.dots.on::before {
   }
 }
 .sine-wave-path {
-  animation: wave 0.4s linear infinite;
+  animation: wave 0.6s linear infinite;
   animation-play-state: paused;
 }
 

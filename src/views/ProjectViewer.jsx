@@ -43,7 +43,7 @@ export function ProjectViewer() {
     );
 
     const goBackRoute = (
-        <h3 className={`from-right-short`}>
+        <h3 className={`from-right-short w-fit`}>
             <span onClick={() => goBack()}
                   className={`flex items-center gap-x-1 mt-[-2%]`}>
                 <MoveLeftArrow/>
@@ -54,10 +54,10 @@ export function ProjectViewer() {
 
     return (
         <div className={`container-content md:items-center px-[5%]`}>
-            <div className={`w-full md:w-[50%] h-[100vh] flex flex-col justify-center gap-y-3`}>
+            <div className={`w-full md:w-[50%] h-[90vh] pt-[10vh] flex flex-col justify-center gap-y-3`}>
                 {goBackRoute}
 
-                <h1 className={`fade-down`}>{dataProject.name}</h1>
+                <h2 className={`fade-down`}>{dataProject.name}</h2>
                 <p className={`text-control fade-down`}>{translation[keyTranslation]?.description}</p>
 
                 <h3 className={`fade-down`}>TECHNOLOGIES</h3>

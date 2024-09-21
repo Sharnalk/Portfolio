@@ -23,8 +23,8 @@ export function Home() {
                   onMouseEnter={() => setIsHover(true)}
                   onMouseLeave={() => setIsHover(false)}
             >
-                <h2>{content.title_line_1}<span id='name'></span></h2>
-                <h2>{content.title_line_2}</h2>
+                <h1>{content.title_line_1}<span id='name'></span></h1>
+                <h1>{content.title_line_2}</h1>
                 <div className={`flex items-center w-full`}>
                     <Wave trigger={isHover}/>
                     <h4 className={`whitespace-nowrap mx-1 z-10`}>{content.subtitle}</h4>

@@ -1,4 +1,4 @@
-.home-title-animation .animate-title, .header-anim {
+.home-title-animation .animate-title, .dots {
     animation: fade-down 0.5s 0.4s backwards;
 }
 

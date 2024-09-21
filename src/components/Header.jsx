@@ -29,16 +29,16 @@ export function Header () {
             <CustomLink to={"/"} className={`custom-cursor`}>
                 <img src="/img.png"
                      alt="logo"
-                     className={`h-[50px] w-[50px] z-10`}
+                     className={`h-[50px] w-[50px] z-10 fade-down`}
                      onClick={() => setActiveMenu(false)}
                 />
             </CustomLink>
-            <div className={`flex items-center gap-x-2 `}>
-                <div className="p-2 z-10" onClick={() => setTheme(!theme)}>
+            <div className={`flex items-center gap-x-2`}>
+                <div className="p-2 z-10 fade-down" onClick={() => setTheme(!theme)}>
                     {sunIcon}
                     {moonIcon}
                 </div>
-                <p className={`font-bold text-lg z-10`} onClick={() => setLang(switchLang)}>
+                <p className={`font-bold text-lg z-10 fade-down`} onClick={() => setLang(switchLang)}>
                     {switchLang.toUpperCase()}
                 </p>
                 <Menu/>
