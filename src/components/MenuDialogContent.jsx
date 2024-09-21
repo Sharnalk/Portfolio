@@ -24,8 +24,8 @@ export function MenuDialogContent({ argSetter }) {
                                         key={menuItem.id}
                                         className={`flex w-fit hover:tracking-widest duration-300 hover-underline`}
                                     >
-                                        <p className={`md:text-xl text-sm tracking-wider`}>{menuItem.id}</p>
-                                        <p className={`lg:text-7xl md:text-5xl text-4xl font-bold;`}>{menuItem.link}</p>
+                                        <p className={`md:text-xl text-lg tracking-wider`}>{menuItem.id}</p>
+                                        <p className={`lg:text-7xl md:text-6xl text-5xl font-bold;`}>{menuItem.link}</p>
                                     </li>
                                 ))
                             }

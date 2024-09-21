@@ -54,7 +54,7 @@ export function ProjectViewer() {
 
     return (
         <div className={`container-content md:items-center px-[5%]`}>
-            <div className={`w-full md:w-[50%] h-[90vh] pt-[10vh] flex flex-col justify-center gap-y-3`}>
+            <div className={`w-full md:w-[50%] h-[90vh] pt-0 md:pt-[10vh] flex flex-col justify-center gap-y-3`}>
                 {goBackRoute}
 
                 <h2 className={`fade-down`}>{dataProject.name}</h2>

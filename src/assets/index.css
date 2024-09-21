@@ -4,11 +4,11 @@
 
 @layer base {
   h1{
-    @apply lg:text-6xl md:text-5xl text-4xl font-bold;
+    @apply lg:text-6xl md:text-5xl text-2xl font-bold;
 
   }
   h2{
-    @apply lg:text-5xl md:text-5xl text-[1.4rem] font-bold;
+    @apply lg:text-5xl md:text-5xl text-3xl font-bold;
   }
   h3{
     @apply lg:text-3xl md:text-2xl text-xl font-bold;
@@ -85,6 +85,7 @@ body {
 
 .text-control{
   text-overflow: ellipsis;
+  font-size: 1.2rem;
 }
 
 .header{

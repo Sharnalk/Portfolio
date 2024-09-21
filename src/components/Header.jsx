@@ -25,7 +25,7 @@ export function Header () {
     }, [theme, activeMenu]);
 
     return (
-        <div className={`header-anim header h-[10vh] md:h-[20vh]`}>
+        <div className={`header-anim header h-[15vh] md:h-[20vh]`}>
             <CustomLink to={"/"} className={`custom-cursor`}>
                 <img src="/img.png"
                      alt="logo"
