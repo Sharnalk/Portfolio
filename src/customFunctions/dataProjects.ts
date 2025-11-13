@@ -1,8 +1,3 @@
-import LogoDawan from "../assets/img/logo_dawan.png";
-import LogoPredictingDrugConsumption from "../assets/svg/pill.svg";
-import LogoPortfolio from "../assets/img/logo_portfolio.png";
-import LogoJavaWebServer from "../assets/img/java_web_server.png";
-
 const portfolio = {
     id: 1,
     key:'portfolio',
@@ -52,9 +47,9 @@ const cfa = {
 
 
 export const projects = [
-    {id: 1, title: 'Portfolio', category: 'Frontend', img: LogoPortfolio, data:portfolio , date: ''},
-    {id: 2, title: 'Predicting Drug Consumption', category: 'Frontend', data:predictingDrugConsumption , img: LogoPredictingDrugConsumption, date: ''},
-    {id: 3, title: 'Java WebServer', category: 'Backend', data:javaWebServer , img: LogoJavaWebServer, date: ''},
-    {id: 4, title: 'FitAce API', category: 'Backend', data:fitAce , img: LogoPredictingDrugConsumption, date: ''},
-    {id: 5, title: 'CFA - DAWAN', category: 'Fullstack', img: LogoDawan, data:cfa ,date: ''},
+    {id: 1, title: 'Portfolio', category: 'Frontend', img: "LogoPortfolio", data:portfolio , date: ''},
+    {id: 2, title: 'Predicting Drug Consumption', category: 'Frontend', data:predictingDrugConsumption , img: "LogoPredictingDrugConsumption", date: ''},
+    {id: 3, title: 'Java WebServer', category: 'Backend', data:javaWebServer , img: "LogoJavaWebServer", date: ''},
+    {id: 4, title: 'FitAce API', category: 'Backend', data:fitAce , img: "LogoPredictingDrugConsumption", date: ''},
+    {id: 5, title: 'CFA - DAWAN', category: 'Fullstack', img: "LogoDawan", data:cfa ,date: ''},
 ];

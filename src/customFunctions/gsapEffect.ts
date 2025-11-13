@@ -2,7 +2,7 @@ import gsap from "gsap";
 
 gsap.registerEffect({
     name: "background",
-    effect: (targets, config) => {
+    effect: (targets: string, config: any) => {
         return gsap.to(targets, {
             top: config.top,
             duration: config.duration,
@@ -15,7 +15,7 @@ gsap.registerEffect({
 
 gsap.registerEffect({
     name: "listText",
-    effect: (targets, config) => {
+    effect: (targets: string, config: any) => {
         return gsap.to(targets, {
             top: config.top,
             x: config.x,

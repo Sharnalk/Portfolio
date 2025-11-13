@@ -1,10 +1,9 @@
-import {h} from 'preact';
-import {MenuDialogContent} from "./MenuDialogContent.jsx";
-import useStore from "../store/store.js";
+import {MenuDialogContent} from "./MenuDialogContent";
+import useStore from "../store/store";
 import {useLayoutEffect} from "preact/hooks";
 import {gsap} from "gsap";
 
-export function Menu (){
+export function Menu(){
 
     const {activeMenu, setActiveMenu} = useStore();
 
@@ -25,10 +24,10 @@ export function Menu (){
         <>
             <span onClick={() => (setActiveMenu(!activeMenu))}>
                 <button className={activeMenu ? "dots on" : "dots"}>
-                    <span></span>
+                    <span/>
                 </button>
             </span>
-            <MenuDialogContent argSetter={setActiveMenu} trigger={activeMenu}/>
+            <MenuDialogContent argSetter={setActiveMenu}/>
         </>
     )
 }

@@ -1,12 +1,12 @@
 CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-    mode: 'production', //à changer en production pour le build
+    mode: 'production',
 
     plugins:[
         new CompressionPlugin({
             algorithm: "gzip",
-            test: /\.(js|css|html|svg|jsx|json)$/,
+            test: /\.(ts|css|html|svg|tsx|json)$/,
             verbose:true,
             threshold: 0,
         }),

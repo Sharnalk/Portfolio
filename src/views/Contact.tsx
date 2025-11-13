@@ -1,5 +1,5 @@
 import {h} from 'preact';
-import useStore from "../store/store.js";
+import useStore from "../store/store";
 
 export function Contact (){
 

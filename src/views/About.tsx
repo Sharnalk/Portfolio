@@ -1,6 +1,6 @@
 import {h} from 'preact';
-import useStore from "../store/store.js";
-import {MoveDownArrow} from "../assets/svg/MoveDownArrow.jsx";
+import useStore from "../store/store";
+import {MoveDownArrow} from "../assets/svg/MoveDownArrow";
 
 export function About (){
 
@@ -19,7 +19,9 @@ export function About (){
                     <p className={`text-lg`}>Anas Jiyar</p>
                 </div>
                 <span className={`text-xl flex items-center font-bold fade-down group`} >
-                    <MoveDownArrow className={`group-hover:animate-bounce`}/>
+                    <div className={`group-hover:animate-bounce`}>
+                        <MoveDownArrow />
+                    </div>
                     <p className={`hover-underline`}><a href="/CV_Developpeur_Fullstack_Anas_JIYAR.pdf" download>Curriculum vitae</a></p>
                 </span>
             </div>

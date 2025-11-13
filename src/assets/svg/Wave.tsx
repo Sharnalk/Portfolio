@@ -1,9 +1,5 @@
-import {h} from 'preact';
-
-export function Wave ({trigger}){
-
+export function Wave ({trigger}: {trigger: boolean}){
     return(
-        <>
             <svg viewBox='0 0 900 100'
                  width='100%'
                  height='100%'
@@ -28,6 +24,5 @@ export function Wave ({trigger}){
                     fill='transparent'
                 />
             </svg>
-        </>
     )
 }

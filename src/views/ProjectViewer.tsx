@@ -1,16 +1,17 @@
-import { h } from 'preact';
-import useStore from "../store/store.js";
-import {useState, useLayoutEffect, useRef, useEffect} from "preact/hooks";
-import { MoveLeftArrow } from "../assets/svg/MoveLeftArrow.jsx";
-import { MoveRightArrow } from "../assets/svg/MoveRightArrow.jsx";
-import { ExternalLink } from "../assets/svg/ExternalLink.jsx";
-import { projects } from "../customFunctions/dataProjects.js";
+/**import useStore from "../store/store";
+import {useState, useLayoutEffect, useEffect} from "preact/hooks";
+import { MoveLeftArrow } from "../assets/svg/MoveLeftArrow";
+import { MoveRightArrow } from "../assets/svg/MoveRightArrow";
+import { ExternalLink } from "../assets/svg/ExternalLink";
+import { projects } from "../customFunctions/dataProjects";
 import { gsap } from "gsap";
 
 export function ProjectViewer() {
     const { dataProject, setDataProject } = useStore();
-    const [keyTranslation, setKeyTranslation] = useState(dataProject.key);
     const translation = useStore((state) => state.translations);
+
+    const [keyTranslation, setKeyTranslation] = useState(dataProject.key);
+    
     const goBack = () => {
         window.history.back();
     };
@@ -29,7 +30,6 @@ export function ProjectViewer() {
 
     useEffect(() => {
         setKeyTranslation(dataProject.key);
-
     }, [dataProject]);
 
     const next = (
@@ -58,7 +58,7 @@ export function ProjectViewer() {
                 {goBackRoute}
 
                 <h2 className={`fade-down`}>{dataProject.name}</h2>
-                <p className={`text-control fade-down`}>{translation[keyTranslation]?.description}</p>
+                <p className={`text-control fade-down`}>{translation.description}</p>
 
                 <h3 className={`fade-down`}>TECHNOLOGIES</h3>
                 <ul className={`flex flex-wrap gap-y-1 gap-x-2`}>
@@ -107,3 +107,4 @@ export function ProjectViewer() {
         </div>
     );
 }
+*/

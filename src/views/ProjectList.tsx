@@ -1,9 +1,8 @@
-import {h} from 'preact';
 import {useLayoutEffect, useState} from "preact/hooks";
 import {Link} from "wouter";
 import {gsap} from "gsap";
-import useStore from "../store/store.js";
-import {projects} from "../customFunctions/dataProjects.js";
+import useStore from "../store/store";
+import {projects} from "../customFunctions/dataProjects";
 
 export function ProjectList (){
 

@@ -1,8 +1,9 @@
-import {h} from 'preact';
-import {CustomLink} from "../customFunctions/CustomLink.jsx";
-import useStore from "../store/store.js";
+import {CustomLink} from "../customFunctions/CustomLink";
+import useStore from "../store/store";
 
-export function MenuDialogContent({ argSetter }) {
+type ArgumentSetter = { argSetter: (value: boolean) => void };
+
+export function MenuDialogContent({ argSetter }: ArgumentSetter) {
     const translation = useStore(state => state.translations);
     const content = translation.menu;
 

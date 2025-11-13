@@ -1,7 +1,6 @@
-import {h} from 'preact';
 import {useEffect} from "preact/hooks";
 import { gsap } from 'gsap';
-import useStore from "../store/store.js";
+import useStore from "../store/store";
 export function BackgroundSvgWave (){
 
     const {activeMenu} = useStore();
@@ -11,7 +10,7 @@ export function BackgroundSvgWave (){
     const svgPathGroup2 = "#visual g:nth-of-type(2) path"
 
     // Custom object for optimize animation creation
-    const paramAnimSvg = (x, y, options = {}) => {
+    const paramAnimSvg = (x: number, y: number, options = {}) => {
         return {
             opacity: 0,
             scale: 0,
@@ -23,7 +22,7 @@ export function BackgroundSvgWave (){
             ...options
         };
     };
-    function animatedSvg(target){
+    function animatedSvg(target: string){
         let gl = gsap.timeline({
             repeat: -1,
             yoyo: true
