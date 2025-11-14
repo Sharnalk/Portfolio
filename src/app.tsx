@@ -1,13 +1,13 @@
 import { Header } from "./components/Header";
 import { Route, Router } from 'wouter';
-import { Home } from "./views/Home";
+import { Home } from "./views/Home/Home";
 import { About } from "./views/About";
 import { Contact } from "./views/Contact";
 import { ProjectList } from "./views/ProjectList";
 import { useEffect } from "preact/hooks";
 import useStore from "./store/store";
 import { BackgroundSvgWave } from "./components/BackgroundSvgWave";
-import { Cursor } from "./components/Cursor";
+import { Cursor } from "./components/Cursor/Cursor";
 import './customFunctions/gsapEffect';
 
 export function App() {

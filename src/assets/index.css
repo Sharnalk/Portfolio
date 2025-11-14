@@ -3,18 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  h1{
+  h1 {
     @apply lg:text-6xl md:text-5xl text-2xl font-bold;
-
   }
-  h2{
+
+  h2 {
     @apply lg:text-5xl md:text-5xl text-3xl font-bold;
   }
-  h3{
+
+  h3 {
     @apply lg:text-3xl md:text-2xl text-xl font-bold;
   }
-  h4{
-    @apply md:text-xl text-base tracking-wider
+
+  h4 {
+    @apply md:text-xl text-base tracking-wider;
   }
 }
 
@@ -32,7 +34,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --theme-color : #EAEAEA
+
+  --theme-color: #EAEAEA;
 }
 
 .dark-theme {
@@ -45,35 +48,27 @@
   --theme-bg-color: #CCCCCC;
 }
 
-*{
-  box-sizing: border-box;
-  cursor: url("svg/dot.svg"), auto;
-}
-
 body {
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+
+  &, * {
+    box-sizing: border-box;
+    cursor: none;
+  }
 }
-.svg-background{
+
+/* ---- Containers ---- */
+
+.svg-background {
   width: 100vw;
   height: 100vh;
   z-index: 1;
 }
 
-.cursor {
-  width: 35px;
-  height: 35px;
-  backdrop-filter: invert();
-  border-radius: 50%;
-  position: absolute;
-  pointer-events: none;
-  transition: transform 150ms ease-out, top 150ms ease-out, left 150ms ease-out;
-  z-index: 10;
-}
-
-.container-content{
+.container-content {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -83,12 +78,14 @@ body {
   z-index: 2;
 }
 
-.text-control{
+.text-control {
   text-overflow: ellipsis;
   font-size: 1.2rem;
 }
 
-.header{
+/* ---- Header ---- */
+
+.header {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,7 +97,10 @@ body {
   background-color: transparent;
   z-index: 9;
 }
-.menu{
+
+/* ---- Menu ---- */
+
+.menu {
   position: absolute;
   top: -100vh;
   left: 0;
@@ -108,59 +108,60 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 9;
-}
-.menu .menu-anim li{
-  top: -5vh;
-  opacity: 0;
+
+  .menu-anim {
+    li {
+      top: -5vh;
+      opacity: 0;
+    }
+  }
 }
 
-.title-view{
+/* ---- Titles ---- */
+
+.title-view {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: bold;
 }
 
+/* ---- Overflow container ---- */
+
 .enable-overflow {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
 }
-.enable-overflow::-webkit-scrollbar-button {
-  display: none;
-}
+
+/* ---- Hover underline ---- */
 
 .hover-underline {
   display: inherit;
   position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--theme-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
 }
 
-.hover-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 4px;
-  background-color: var(--theme-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease-out;
-}
-
-.hover-underline:hover::after {
-  transform: scaleX(1);
-}
-
-.arrow {
-  transition: all 0.5s;
-  position: relative;
-  right: 0;
-  padding-top: 2px;
-}
-
-div:hover > .arrow {
-  right: -10px;
-}
+/* ---- Burger button ---- */
 
 button.dots {
   background-color: transparent;
@@ -168,95 +169,103 @@ button.dots {
   height: 25px;
   border: none;
   position: relative;
-  cursor: inherit;
   font-weight: 700;
   z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after,
+  &::before,
+  span {
+    width: 10%;
+    height: 20%;
+    border-radius: 100px;
+    position: absolute;
+    background: var(--theme-color);
+    transform: rotate(0deg);
+    transition: all 0.4s;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+  }
+
+  &::after {
+    top: -5%;
+  }
+
+  &::before {
+    bottom: -5%;
+  }
+
+  span {
+    top: 50%;
+    margin-top: -2.5px;
+  }
+
+  &.on {
+    &::after {
+      transform: rotate(135deg) translate(8px, -7.5px);
+      width: 70%;
+      right: 9%;
+    }
+
+    &::before {
+      transform: rotate(225deg);
+      width: 70%;
+      bottom: 50%;
+      right: 9%;
+      margin-bottom: -2px;
+    }
+  }
 }
 
-button.dots:focus {
-  outline: none;
-}
-
-/* Menu Burger  */
-button.dots.dots::after,
-button.dots.dots::before,
-button.dots.dots span {
-  width: 10%;
-  height: 20%;
-  border-radius: 100px;
-  position: absolute;
-  background: var(--theme-color);
-  transform: rotate(0deg);
-  transition: all 0.4s;
-}
-
-button.dots.dots::after,
-button.dots.dots::before {
-  content: "";
-}
-
-button.dots.dots::after {
-  top: -5%;
-}
-
-button.dots.dots::before {
-  bottom: -5%;
-}
-
-button.dots.dots span {
-  top: 50%;
-  margin-top: -2.5px;
-}
-
-button.dots.dots.on::after {
-  transform: rotate(135deg) translate(8px, -7.5px);
-  width: 70%;
-  right: 9%;
-}
-
-button.dots.dots.on::before {
-  transform: rotate(225deg);
-  width: 70%;
-  bottom: 50%;
-  right: 9%;
-  margin-bottom: -2px;
-}
+/* ---- Highlight text ---- */
 
 .highlight-text {
   position: relative;
   display: flex;
   overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 100%;
+    background-color: var(--theme-bg-color);
+    z-index: -1;
+    transition: top 0.4s ease;
+  }
+
+  &:hover::after {
+    top: 0;
+  }
 }
 
-.highlight-text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 100%;
-  background-color: var(--theme-bg-color);
-  z-index: -1;
-  transition: top 0.4s ease;
-}
+/* ---- Sine wave ---- */
 
-.highlight-text:hover::after {
-  top: 0;
-}
-
-@keyframes wave{
-  0%{
+@keyframes wave {
+  0% {
     transform: translateX(0)
   }
+
   100% {
     transform: translateX(-200px)
   }
 }
-.sine-wave-path {
-  animation: wave 0.6s linear infinite;
-  animation-play-state: paused;
-}
 
-.sine-wave:hover .sine-wave-path {
-  animation-play-state: running;
+.sine-wave {
+  .sine-wave-path {
+    animation: wave 0.6s linear infinite;
+    animation-play-state: paused;
+  }
+
+  &:hover .sine-wave-path {
+    animation-play-state: running;
+  }
 }

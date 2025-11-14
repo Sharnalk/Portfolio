@@ -1,0 +1,32 @@
+.hover-anim {
+  position: relative;
+}
+
+.hover-anim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsl(200, 100%, 80%);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform .3s ease;
+}
+
+.hover-anim:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ---- Arrow animation ---- */
+
+.arrow {
+  transition: all 0.5s;
+  position: relative;
+  right: 0;
+  padding-top: 2px;
+}
+
+div:hover>.arrow {
+  right: -10px;
+}

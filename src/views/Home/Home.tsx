@@ -1,11 +1,12 @@
-import {CustomLink} from "../customFunctions/CustomLink";
-import {MoveRightArrow} from "../assets/svg/MoveRightArrow.js";
-import useStore from "../store/store";
+import {CustomLink} from "../../customFunctions/CustomLink";
+import {MoveRightArrow} from "../../assets/svg/MoveRightArrow.js";
+import useStore from "../../store/store";
 import {useLayoutEffect} from "preact/hooks";
 import {gsap} from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
-import { Wave } from "../assets/svg/Wave";
+import { Wave } from "../../assets/svg/Wave";
 import {useState} from "preact/hooks";
+import './home.css';
 
 export function Home() {
     gsap.registerPlugin(TextPlugin);
@@ -48,15 +49,14 @@ export function Home() {
                     links.map(element => (
                         <CustomLink key={element.id} to={element.to}>
                             <span className="text-lg md:text-[1.25rem] hover-underline group">
-                                <div className={`flex`}>
+                                <span className={`hover-anim flex`}>
                                     {element.text}
-                                    <p className="arrow duration-300 group-hover:translate-x-0.5 ml-2"><MoveRightArrow/></p>
-                                </div>
+                                    <p className="arrow ml-2"><MoveRightArrow/></p>
+                                </span>
                             </span>
                         </CustomLink>
                     ))
                 }
-            
             </section>
         </div>
     );
